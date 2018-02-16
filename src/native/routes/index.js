@@ -24,6 +24,9 @@ import UpdateProfileComponent from '../components/UpdateProfile';
 import MemberContainer from '../../containers/Member';
 import ProfileComponent from '../components/Profile';
 
+import MessagesContainer from '../../containers/MessageList';
+import MessagesComponent from '../components/MessageList';
+
 import AboutComponent from '../components/About';
 
 const Index = (
@@ -52,6 +55,15 @@ const Index = (
           {...DefaultProps.navbarProps}
         >
           <Scene key="recipes" component={RecipesContainer} Layout={RecipesComponent} />
+        </Stack>
+
+        <Stack
+          key="messages"
+          title="Messages"
+          icon={() => <Icon name="chat" {...DefaultProps.icons} />}
+          {...DefaultProps.navbarProps}
+        >
+          <Scene key="messages" component={MessagesContainer} Layout={MessagesComponent} />
         </Stack>
 
         <Stack

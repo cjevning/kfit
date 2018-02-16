@@ -17,6 +17,7 @@
     "jest-expo": "^22.0.0",
     "json-loader": "^0.5.7",
     "node-sass": "^4.7.2",
+    "react-native-keyboard-aware-scroll-view": "^0.4.3",
     "react-native-scripts": "1.7.0",
     "react-test-renderer": "16.0.0-beta.5",
     "react-transform-catch-errors": "^1.0.2",
@@ -34,10 +35,11 @@
   "scripts": {
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
+    "lint": "eslint --fix src",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch",
-    "web": "webpack-dev-server --content-base build/ --config webpack/web.dev.config.js --port 3001 --inline --hot --colors --historyApiFallback",
+    "web": "webpack-dev-server --content-base build/ --config webpack/web.dev.config.js --port 3000 --inline --hot --colors --historyApiFallback",
     "web-bundle": "webpack --config webpack/web.prod.config.js --progress --colors",
     "clear-cache": "gulp clear-cache"
   },

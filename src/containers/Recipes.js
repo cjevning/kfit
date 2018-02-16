@@ -29,14 +29,12 @@ class RecipeListing extends Component {
   /**
     * Fetch Data from API, saving to Redux
     */
-  fetchRecipes = () => {
-    return this.props.getRecipes()
-      .then(() => this.props.getMeals())
-      .catch((err) => {
-        console.log(`Error: ${err}`);
-        return this.props.setError(err);
-      });
-  }
+  fetchRecipes = () => this.props.getRecipes()
+    .then(() => this.props.getMeals())
+    .catch((err) => {
+      console.log(`Error: ${err}`);
+      return this.props.setError(err);
+    })
 
   render = () => {
     const { Layout, recipes, match } = this.props;
